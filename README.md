@@ -10,7 +10,7 @@ following along with the <a href="http://guides.rubygems.org/make-your-own-gem/#
 
 
 ### Forum schema map
-<img src="screen_tables.png">
+<img src="public/screen_tables.png">
 
 egalitarian bundling success
 <img src="public/egalbundle.png">
