@@ -4,6 +4,7 @@ class Seed
     seed = Seed.new
     seed.generate_users
     seed.generate_posts
+    seed.generate_comments
   end
 
   def generate_users
@@ -18,8 +19,16 @@ class Seed
     30.times do |i|
       post = Post.create!(title: Faker::Book.title,
                           content: Faker::Hipster.sentence(5),
-                          thumbnail: Faker::Fillmurray.image)
-      post.save!
+                          thumbnail: Faker::Fillmurray.image,
+                          user_id: rand(User.first.id..User.last.id))
+    end
+  end
+
+  def generate_comments
+    60.times do |i|
+      post = Post.create!(content: Faker::Hipster.sentence(5),
+                          user_id: rand(User.first.id..User.last.id),
+                          post_id: rand(Post.first.id..Post.last.id))
     end
   end
 
