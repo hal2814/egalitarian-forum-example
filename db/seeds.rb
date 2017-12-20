@@ -34,6 +34,8 @@ class Seed
 
 end
 
+p "Created #{User.count} posts"
 p "Created #{Post.count} posts"
+p "Created #{Comment.count} posts"
 
 Seed.begin
