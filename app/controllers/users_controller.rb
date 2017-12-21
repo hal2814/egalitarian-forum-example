@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+
   def create
     user = User.new(user_params)
     if user.save
@@ -10,6 +10,11 @@ class UsersController < ApplicationController
       flash[:alert] = "There was a problem signing up."
       redirect_to '/sign_up'
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts
   end
 
   private

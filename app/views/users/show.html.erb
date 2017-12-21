@@ -1,4 +1,13 @@
 <div class="section">
+  <div class="row">
+    <div class="col s6">
+      <h3><%= @user.name %></h3>
+    </div>
+  </div>
+</div>
+
+
+<div class="section">
   <table>
     <tr>
       <th></th>
@@ -10,7 +19,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><h5><%= link_to post.title, post_path(post.id) %></h5></td>
-        <td><p>by <%= link_to post.user.name, user_path(post.user.id) %></p></td>
+        <td><p>by <%= post.user.name %></p></td>
         <td><%= image_tag post.thumbnail %></td>
         <td>Submitted <%= time_ago_in_words(post.created_at) %></td>
         <td>
