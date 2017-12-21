@@ -4,11 +4,12 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
     <% @posts.each do |post| %>
       <tr>
         <td><h5><%= link_to post.title, post_path(post.id) %></h5></td>
-        <td><p><%= post.content %></p></td>
+        <td><p>by <%= post.user.name %></p></td>
         <td><%= image_tag post.thumbnail %></td>
       </tr>
     <% end %>

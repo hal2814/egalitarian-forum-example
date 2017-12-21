@@ -1,14 +1,30 @@
 <div class="section">
-<h3><%= @post.title %></h3>
-<p><%= @post.content %></p>
-  <table>
-    <tr>
-      <th></th>
-    </tr>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><p><%= comment.content %></p></td>
-      </tr>
-    <% end %>
-  </table>
+  <div class="row">
+    <div class="col s6 m7">
+      <p><%= @post.user.name %></p>
+      <div class="card horizontal">
+        <div class="card-image">
+          <%= image_tag @post.thumbnail %>
+          <span class="card-title"><%= @post.title %></span>
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p><%= @post.content %></p>
+          </div>
+        </div>
+      </div>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        <% @comments.each do |comment| %>
+          <tr>
+            <td><p><%= comment.user.name %></p></td>
+            <td><p><%= comment.content %></p></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
 </div>
