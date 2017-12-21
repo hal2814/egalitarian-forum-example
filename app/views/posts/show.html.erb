@@ -1,0 +1,14 @@
+<div class="section">
+<h3><%= @post.title %></h3>
+<p><%= @post.content %></p>
+  <table>
+    <tr>
+      <th></th>
+    </tr>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><p><%= comment.content %></p></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
