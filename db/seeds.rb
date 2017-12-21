@@ -24,6 +24,13 @@ class Seed
     end
   end
 
+  def generate_votes
+    100.times do |i|
+      post = Post.find(rand((Post.first.id)..(Post.last.id)))
+      user = User.find()
+    end
+  end
+
   def generate_comments
     60.times do |i|
       post = Comment.create!(content: Faker::Hipster.sentence(5),
