@@ -26,7 +26,7 @@ class Seed
 
   def generate_comments
     60.times do |i|
-      post = Post.create!(content: Faker::Hipster.sentence(5),
+      post = Comment.create!(content: Faker::Hipster.sentence(5),
                           user_id: rand(User.first.id..User.last.id),
                           post_id: rand(Post.first.id..Post.last.id))
     end
@@ -34,8 +34,8 @@ class Seed
 
 end
 
-p "Created #{User.count} posts"
+p "Created #{User.count} users"
 p "Created #{Post.count} posts"
-p "Created #{Comment.count} posts"
+p "Created #{Comment.count} comments"
 
 Seed.begin
