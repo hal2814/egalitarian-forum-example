@@ -15,12 +15,12 @@
         <td>Submitted <%= time_ago_in_words(post.created_at) %></td>
         <td>
           <%= link_to like_post_path(post), method: :put do %>
-            Upvote
+            <%= image_tag "uparrow.png", class: "arrow" %>
             <%= post.get_upvotes.size %>
           <% end %>
           <%= link_to dislike_post_path(post), method: :put do %>
-            Downvote
-            <%= post.get_downvotes.size %>
+            <%= image_tag "downarrow.png", class: "arrow" %>
+            <!-- <%= post.get_downvotes.size %> -->
           <% end %>
         </td>
       </tr>
