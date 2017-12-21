@@ -1,5 +1,5 @@
 # Test application for Egalitarian gem
-
+<img src="public/egalscreen.png">
 
 ### Description
 The purpose of this application is to simulate a forum environment to test, demonstrate, and help develop what the Egalitarian gem will do.
