@@ -15,7 +15,13 @@
  */
 
  @import "materialize";
+ @import url('https://fonts.googleapis.com/css?family=Bungee');
 
 img{
-  width: 10%;
+  width: 50%;
+}
+
+
+.titlefont{
+  font-family: 'Bungee', cursive;
 }

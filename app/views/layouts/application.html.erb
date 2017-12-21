@@ -8,8 +8,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <nav>
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <div class="nav-wrapper deep-purple">
+      <ul id="nav-mobile" class="deep-purple right hide-on-med-and-down">
         <li><%= link_to "posts", posts_path %></li>
         <% if current_user %>
           <li><%= current_user.email %></li>
@@ -18,6 +18,9 @@
           <li><%= link_to "Sign up", 'sign_up' %></li>
           <li><%= link_to "Sign in", '/sign_in' %></li>
         <% end %>
+      </ul>
+      <ul class="deep-purple left hide-on-med-and-down">
+        <li class="brand-logo titlefont">Egalitarian</li>
       </ul>
     </div>
   </nav>
